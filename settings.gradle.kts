@@ -1,2 +1,2 @@
-rootProject.name = "JetNews"
+rootProject.name = "JetpackCompose"
 include(":app")
