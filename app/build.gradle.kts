@@ -68,7 +68,7 @@ dependencies {
     implementation("androidx.ui:ui-layout:$composeVersion")
     implementation("androidx.ui:ui-material:$composeVersion")
     implementation("androidx.ui:ui-tooling:$composeVersion")
-    ktlint("com.pinterest:ktlint:0.34.2")
+    ktlint("com.pinterest:ktlint:0.35.0")
 }
 
 tasks.register<JavaExec>("ktlint") {

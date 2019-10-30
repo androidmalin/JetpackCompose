@@ -1,0 +1,13 @@
+Jetpack Compose是一个现代化的工具包用于构建原生的Android UI.
+
+Jetpack Compose使用更少的代码，强大的工具和直观的Kotlin API简化并加速了Android的UI开发。
+
+Jetpack Compose用于构建一个带有声明函数的简单UI组件。
+
+无需编辑任何XML布局,通过调用Jetpack的Compose函数来描述所需的元素，其余的工作由Compose编译器完成。
+
+Jetpack Compose使用自定义kotlin编译器插件将这些可组合函数转换为应用程序的ui元素
+
+android studio允许您在ide中预览可组合的功能，而无需将应用程序安装到android设备或模拟器上
+
+Jetpack Compose当前在Developer Preview中。 API界面尚未最终确定，因此不应在生产应用程序中使用。

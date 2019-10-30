@@ -23,7 +23,10 @@ buildscript {
         }
     }
     dependencies {
+        //https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
         classpath("com.android.tools.build:gradle:4.0.0-alpha01")
+
+        //https://dl.bintray.com/kotlin/kotlin-eap/org/jetbrains/kotlin/kotlin-gradle-plugin/
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.60-eap-25")
     }
 }
