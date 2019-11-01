@@ -68,6 +68,17 @@ dependencies {
     implementation("androidx.ui:ui-layout:$composeVersion")
     implementation("androidx.ui:ui-material:$composeVersion")
     implementation("androidx.ui:ui-tooling:$composeVersion")
+
+    implementation("androidx.ui:ui-core:$composeVersion")
+    implementation("androidx.ui:ui-animation:$composeVersion")
+    implementation("androidx.ui:ui-animation-core:$composeVersion")
+    implementation("androidx.ui:ui-android-text:$composeVersion")
+    implementation("androidx.ui:ui-platform:$composeVersion")
+    implementation("androidx.ui:ui-vector:$composeVersion")
+    implementation("androidx.ui:ui-foundation:$composeVersion")
+    implementation("androidx.ui:ui-text:$composeVersion")
+    implementation("androidx.ui:ui-test:$composeVersion")
+
     ktlint("com.pinterest:ktlint:0.35.0")
 }
 
