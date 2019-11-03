@@ -9,7 +9,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // The setContent block defines the activity's layout
         setContent {
-            newView()
+            myApp {
+                MyScreenState()
+            }
         }
     }
 }
