@@ -8,6 +8,7 @@ import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.Spacing
 import androidx.ui.material.Button
+import androidx.ui.material.Checkbox
 import androidx.ui.material.ContainedButtonStyle
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
@@ -33,13 +34,6 @@ fun myButtonContent() {
         EnableButton(text = "Button1", enable = true)
         EnableButton(text = "Button2", enable = true)
         EnableButton(text = "Button3", enable = true)
-        EnableButton(text = "Button4", enable = true)
-        EnableButton(text = "Button5", enable = true)
-        EnableButton(text = "Button6", enable = true)
-        EnableButton(text = "Button7", enable = true)
-        EnableButton(text = "Button8", enable = true)
-        EnableButton(text = "Button9", enable = true)
-        EnableButton(text = "Button10", enable = true)
     }
 }
 
@@ -79,6 +73,34 @@ fun EnableButton(text: String, enable: Boolean) {
     )
 }
 
+@Preview("Model CheckBox Preview")
+@Composable
+fun DefaultPreviewModelCheckBox() {
+    MyScreenModelCheckBox()
+}
+
+@Composable
+fun MyScreenModelCheckBox(appState: AppFormState = AppFormState()) {
+    Column {
+        Greeting("Android")
+        Divider(color = Color.Black)
+        Form(appState.formState)
+    }
+
+}
+
+// Simplified version of a typical AppState
+class AppFormState(val formState: FormState = FormState(true))
+
+@Model
+class FormState(var optionChecked: Boolean)
+
+@Composable
+fun Form(formState: FormState) {
+    Checkbox(
+        checked = formState.optionChecked,
+        onCheckedChange = { newState -> formState.optionChecked = newState })
+}
 
 @Preview("Data State Preview")
 @Composable

@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         // The setContent block defines the activity's layout
         setContent {
             myApp {
-                MyScreenState()
+                MyScreenModelCheckBox()
             }
         }
     }
