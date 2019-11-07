@@ -14,11 +14,16 @@ import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.surface.Surface
 import androidx.ui.tooling.preview.Preview
+// import androidx.ui.material.Button
+// import androidx.ui.material.Checkbox
+// import androidx.ui.material.ContainedButtonStyle
+// import androidx.ui.material.Divider
+// import androidx.ui.material.MaterialTheme
+// import androidx.ui.material.surface.Surface
 
 /**
  * https://codelabs.developers.google.com/codelabs/jetpack-compose-basics/index.html?index=..%2F..index#0
  */
-
 @Composable
 fun myScreenContent() {
     Column {
@@ -37,9 +42,8 @@ fun myButtonContent() {
     }
 }
 
-
-//当使用可组合函数作为参数时，请注意@composable中的额外括号。
-//因为注释是应用在函数上的，所以它们是必需的！
+// 当使用可组合函数作为参数时，请注意@composable中的额外括号。
+// 因为注释是应用在函数上的，所以它们是必需的！
 @Composable
 fun myApp(child: @Composable() () -> Unit) {
     MaterialTheme {
@@ -86,7 +90,6 @@ fun MyScreenModelCheckBox(appState: AppFormState = AppFormState()) {
         Divider(color = Color.Black)
         Form(appState.formState)
     }
-
 }
 
 // Simplified version of a typical AppState
@@ -108,7 +111,7 @@ fun DefaultPreviewState() {
     MyScreenState()
 }
 
-//----data state
+// ----data state
 @Composable
 fun MyScreenState(appState: AppState = AppState()) {
     Column {
@@ -118,7 +121,6 @@ fun MyScreenState(appState: AppState = AppState()) {
         Divider(color = Color.Transparent, height = 32.dp)
         Counter(appState.counterState)
     }
-
 }
 
 // Simplified version of a typical AppState
