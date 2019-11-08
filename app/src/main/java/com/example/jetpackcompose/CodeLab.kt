@@ -27,9 +27,9 @@ import androidx.ui.tooling.preview.Preview
 @Composable
 fun myScreenContent() {
     Column {
-        Greeting(name = "Android")
+        Greeting_CodeLab(name = "Android")
         Divider(color = Color.Blue)
-        Greeting(name = "iOS")
+        Greeting_CodeLab(name = "iOS")
     }
 }
 
@@ -54,7 +54,7 @@ fun myApp(child: @Composable() () -> Unit) {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun Greeting_CodeLab(name: String) {
     Text(text = "Hello $name", modifier = Spacing(24.dp))
 }
 
@@ -86,7 +86,7 @@ fun DefaultPreviewModelCheckBox() {
 @Composable
 fun MyScreenModelCheckBox(appState: AppFormState = AppFormState()) {
     Column {
-        Greeting("Android")
+        Greeting_CodeLab("Android")
         Divider(color = Color.Black)
         Form(appState.formState)
     }
@@ -115,9 +115,9 @@ fun DefaultPreviewState() {
 @Composable
 fun MyScreenState(appState: AppState = AppState()) {
     Column {
-        Greeting("Android")
+        Greeting_CodeLab("Android")
         Divider(color = Color.Black)
-        Greeting("iOS")
+        Greeting_CodeLab("iOS")
         Divider(color = Color.Transparent, height = 32.dp)
         Counter(appState.counterState)
     }
