@@ -27,7 +27,6 @@ fun Greeting_CodeLab_Basic(name: String) {
     }
 }
 
-
 /**
  * Modifiers
  *
@@ -64,7 +63,7 @@ fun Greeting_CodeLab_Modifiers(name: String) {
 fun MyApp() {
     MaterialTheme {
         Surface(color = Color.Yellow) {
-            Greeting_CodeLab_Modifiers("Android");
+            Greeting_CodeLab_Modifiers("Android")
         }
     }
 }
@@ -108,9 +107,9 @@ fun MyApp_New(child: @Composable() () -> Unit) {
 @Composable
 fun MyApp_Multiple_Time() {
     Column {
-        Greeting_CodeLab_Modifiers("Android");
+        Greeting_CodeLab_Modifiers("Android")
         Divider(color = Color.Black)
-        Greeting_CodeLab_Modifiers("iOS");
+        Greeting_CodeLab_Modifiers("iOS")
     }
 }
 

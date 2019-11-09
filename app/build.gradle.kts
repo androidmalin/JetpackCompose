@@ -20,13 +20,18 @@ plugins {
 
 android {
     compileSdkVersion(29)
+    buildToolsVersion("29.0.2")
     defaultConfig {
+        resConfigs("en")
         applicationId = "com.example.jetpackcompose"
-        minSdkVersion(21)
+        minSdkVersion(29)
         targetSdkVersion(29)
         versionCode = 1
         versionName = "1.0"
         vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters("arm64-v8a", "x86")
+        }
     }
     buildTypes {
         getByName("release") {
@@ -35,6 +40,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+
+        getByName("debug") {
+            isMinifyEnabled = false
+            isZipAlignEnabled = false
+            isShrinkResources = false
+            isCrunchPngs = false
         }
     }
     compileOptions {
@@ -57,10 +69,10 @@ android {
 val ktlint by configurations.creating
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60-eap-25")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60-eap-76")
     implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.activity:activity-ktx:1.0.0")
-    implementation("androidx.core:core-ktx:1.1.0")
+    implementation("androidx.activity:activity-ktx:1.1.0-rc01")
+    implementation("androidx.core:core-ktx:1.2.0-beta01")
 
     val composeVersion = "0.1.0-dev02"
     implementation("androidx.compose:compose-runtime:$composeVersion")

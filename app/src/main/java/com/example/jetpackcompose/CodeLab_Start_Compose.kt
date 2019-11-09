@@ -4,7 +4,6 @@ import androidx.compose.Composable
 import androidx.ui.core.Text
 import androidx.ui.tooling.preview.Preview
 
-
 /**
  * 可组合函数是用@Composable注释标记的Kotlin函数
  *

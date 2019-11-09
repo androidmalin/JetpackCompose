@@ -1,7 +1,6 @@
 package com.example.jetpackcompose
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
 
 /**
  * https://codelabs.developers.google.com/codelabs/jetpack-compose-basics/index.html?index=..%2F..index#0
@@ -18,5 +17,4 @@ import androidx.ui.core.Text
  */
 @Composable
 fun baseUI() {
-
 }
