@@ -71,8 +71,8 @@ val ktlint by configurations.creating
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60-eap-76")
     implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.activity:activity-ktx:1.1.0-rc01")
-    implementation("androidx.core:core-ktx:1.2.0-beta01")
+    implementation("androidx.activity:activity-ktx:1.1.0-rc02")
+    implementation("androidx.core:core-ktx:1.2.0-beta02")
 
     val composeVersion = "0.1.0-dev02"
     implementation("androidx.compose:compose-runtime:$composeVersion")
