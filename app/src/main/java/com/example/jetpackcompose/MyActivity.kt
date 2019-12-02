@@ -8,7 +8,7 @@ class MyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Greeting()
+            MaterialDesignFunction_add_style_text()
         }
     }
 }
