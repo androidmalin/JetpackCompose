@@ -82,6 +82,7 @@ fun NewsStory_add_picture() {
         crossAxisSize = LayoutSize.Expand,
         modifier = Spacing(16.dp)
     ) {
+        //ImageView.ScaleType.CENTER_CROP
         DrawImage(image)
         Text("A day in Shark Fin Cove")
         Text("Davenport, California")
@@ -109,11 +110,12 @@ fun NewsStory_add_a_container_wrapper_image() {
         modifier = Spacing(16.dp)
     ) {
         Container(expanded = true, height = 180.dp) {
+            //ImageView.ScaleType.CENTER_CROP
             DrawImage(image)
         }
 
         // Add a spacer to separate the graphic from the headings.
-        HeightSpacer(10.dp)
+        HeightSpacer(16.dp)
 
         Text("A day in Shark Fin Cove")
         Text("Davenport, California")

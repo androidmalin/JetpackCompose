@@ -16,6 +16,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
 }
 
 android {
@@ -24,7 +26,7 @@ android {
     defaultConfig {
         resConfigs("en")
         applicationId = "com.example.jetpackcompose"
-        minSdkVersion(29)
+        minSdkVersion(21)
         targetSdkVersion(29)
         versionCode = 1
         versionName = "1.0"
@@ -69,10 +71,17 @@ android {
 val ktlint by configurations.creating
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60-eap-76")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60-eap-25")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.activity:activity-ktx:1.1.0-rc02")
-    implementation("androidx.core:core-ktx:1.2.0-beta02")
+    implementation("androidx.core:core-ktx:1.2.0-rc01")
+    implementation("androidx.recyclerview:recyclerview:1.1.0")
+    implementation("com.google.android.material:material:1.0.0")
+    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation("com.android.support.constraint:constraint-layout:1.1.3")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
 
     val composeVersion = "0.1.0-dev02"
     implementation("androidx.compose:compose-runtime:$composeVersion")

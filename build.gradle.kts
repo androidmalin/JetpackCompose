@@ -24,10 +24,10 @@ buildscript {
     }
     dependencies {
         //https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
-        classpath("com.android.tools.build:gradle:4.0.0-alpha02")
+        classpath("com.android.tools.build:gradle:4.0.0-alpha04")
 
         //https://dl.bintray.com/kotlin/kotlin-eap/org/jetbrains/kotlin/kotlin-gradle-plugin/
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.60-eap-76")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.60-eap-25")
     }
 }
 
@@ -38,22 +38,25 @@ allprojects {
         maven {
             url = uri("https://dl.bintray.com/kotlin/kotlin-eap")
         }
+        maven{
+            url = uri("http://www.jabylon.org/maven/")
+        }
     }
 
-//    //skip Test tasks
-//    gradle.taskGraph.whenReady {
-//        tasks.forEach { task ->
-//            if (task.name.contains("lint")
-//                || task.name.contains("Aidl")
-//                || task.name.contains("mockableAndroidJar")
-//                || task.name.contains("test")
-//                || task.name.contains("Wear")
-//                || task.name.contains("UnitTest")
-//                || task.name.contains("AndroidTest")
-//            ) {
-//                task.enabled = false
-//            }
-//        }
-//    }
+    //skip Test tasks
+    gradle.taskGraph.whenReady {
+        tasks.forEach { task ->
+            if (task.name.contains("lint")
+                || task.name.contains("Aidl")
+                || task.name.contains("mockableAndroidJar")
+                || task.name.contains("test")
+                || task.name.contains("Wear")
+                || task.name.contains("UnitTest")
+                || task.name.contains("AndroidTest")
+            ) {
+                task.enabled = false
+            }
+        }
+    }
 
 }

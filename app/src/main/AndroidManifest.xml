@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyActivity" />
+        <activity android:name=".HelloJava" />
     </application>
 
 </manifest>
