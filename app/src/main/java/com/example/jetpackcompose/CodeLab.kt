@@ -105,39 +105,6 @@ fun Form(formState: FormState) {
         onCheckedChange = { newState -> formState.optionChecked = newState })
 }
 
-@Preview("Data State Preview")
-@Composable
-fun DefaultPreviewState() {
-    MyScreenState()
-}
-
-// ----data state
-@Composable
-fun MyScreenState(appState: AppState = AppState()) {
-    Column {
-        Greeting_CodeLab("Android")
-        Divider(color = Color.Black)
-        Greeting_CodeLab("iOS")
-        Divider(color = Color.Transparent, height = 32.dp)
-        Counter(appState.counterState)
-    }
-}
-
-// Simplified version of a typical AppState
-class AppState(val counterState: CounterState = CounterState())
-
-@Model
-class CounterState(var count: Int = 0)
-
-@Composable
-fun Counter(state: CounterState) {
-    Button(text = "I've been clicked ${state.count} times",
-        onClick = {
-            state.count++
-        }
-    )
-}
-
 @Preview("Text Preview")
 @Composable
 fun DefaultPreviewMyApp() {

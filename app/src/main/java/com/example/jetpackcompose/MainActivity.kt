@@ -9,7 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // The setContent block defines the activity's layout
         setContent {
-            MaterialDesignFunction_add_style_text()
+            MyApp_New {
+                NewsStory()
+                //MyScreenState()
+            }
         }
     }
 }
